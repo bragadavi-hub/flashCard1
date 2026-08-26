@@ -8,33 +8,37 @@ body {
   display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
-  background-color: #f5f2f2; 
-  font-family: Arial, sans-serif;
+  background-color: #0f172a; /* Fundo azul bem escuro (Dark Mode) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   align-items: center;
+  color: #f8fafc;
 } 
 
 .cabecalho { 
-  background-color: #7e3e1c; 
-  padding: 15px 25px; 
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Gradiente azul moderno */
+  padding: 20px 30px; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
   width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 } 
 
 h1 { 
   color: #fff; 
-  font-size: 24px; 
+  font-size: 22px; 
+  letter-spacing: 0.5px;
 } 
 
 .cabecalho-link { 
-  color: #fff; 
+  color: #93c5fd; 
   text-decoration: none; 
+  font-weight: 600;
 } 
 
-.cabecalho-link:focus { color: #ffe8d6; } 
-.cabecalho-link:active { color: #ffd1a6; } 
-.cabecalho-link:visited { color: #ffd1a6; } 
+.cabecalho-link:hover { 
+  color: #fff; 
+}
 
 main { 
   flex: 1; 
@@ -43,8 +47,14 @@ main {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  gap: 30px; /* Garante o espaçamento fluido e organizado entre o título, o cartão e o botão */
+  gap: 30px; 
 } 
+
+main h2 {
+  color: #cbd5e1;
+  font-size: 18px;
+  font-weight: normal;
+}
 
 .cartoes { 
   display: flex; 
@@ -53,8 +63,8 @@ main {
 } 
 
 .cartao {
-  width: 300px;
-  height: 220px;
+  width: 320px;
+  height: 230px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -64,7 +74,7 @@ main {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s; 
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
   transform-style: preserve-3d; 
 } 
 
@@ -78,19 +88,24 @@ main {
   position: absolute; 
   width: 100%;
   height: 100%;
-  border-radius: 12px; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  border-radius: 16px; /* Bordas mais arredondadas */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
   backface-visibility: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: #fff;
+  padding: 25px;
+  background-color: #1e293b; /* Cartão cinza-azulado escuro */
+  border: 1px solid #334155;
+  font-size: 17px;
+  line-height: 1.5;
 } 
 
 .cartao-verso { 
   transform: rotateY(180deg); 
-  background-color: #faedcd;
+  background-color: #0f172a; /* Verso com tom ligeiramente diferente */
+  border: 1px solid #3b82f6; /* Borda azulada destacando o verso */
+  color: #38bdf8; /* Texto em azul claro */
 } 
 
 .escondido {
@@ -98,25 +113,28 @@ main {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #7e3e1c;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: transform 0.2s, opacity 0.2s;
 }
 
 button:hover {
-  background-color: #5a2c13; 
+  opacity: 0.9;
+  transform: translateY(-2px); /* Pequeno efeito de elevação ao passar o mouse */
 }
 
 footer { 
-  background-color: #7e3e1c; 
+  background-color: #020617; 
   padding: 15px 25px; 
-  color: #fff; 
+  color: #64748b; 
   width: 100%;
   text-align: center;
+  font-size: 14px;
 }
