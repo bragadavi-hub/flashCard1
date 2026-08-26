@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Flashcards de Óptica - Nível 2</title> 
+    <link rel="stylesheet" href="style.css">
+  </head> 
+  <body> 
+    <header class="cabecalho"> 
+      <h1>Confere Aí - Óptica Avançada</h1> 
+      <nav> 
+        <a href="#" class="cabecalho-link">Início</a> 
+      </nav> 
+    </header> 
+ 
+    <main> 
+      <h2>Descubra a resposta interagindo com o cartão</h2> 
+      <section class="cartoes"> 
+        <article class="cartao" onclick="virarCard()">
+          <div class="cartao-interno">
+            <div class="cartao-frente">
+              <p id="pergunta">Carregando pergunta...</p>
+            </div> 
+            <div class="cartao-verso"> 
+              <p id="resposta" class="escondido">Carregando resposta...</p>
+            </div> 
+          </div> 
+        </article> 
+      </section>
+
+      <div>
+        <button onclick="proximoCard(event)">Próximo Card</button>
+      </div>
+    </main> 
+ 
+    <footer> 
+      <p>Projeto feito por [Maria Zanzarini]</p> 
+    </footer> 
+
+    <script src="script.js"></script>
+  </body> 
+</html>
