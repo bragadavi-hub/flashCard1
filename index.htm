@@ -1,43 +1,42 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-  <head> 
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Flashcards de Óptica - Nível 2</title> 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Óptica - Flashcards</title>
     <link rel="stylesheet" href="style.css">
-  </head> 
-  <body> 
-    <header class="cabecalho"> 
-      <h1>Confere Aí - Óptica Avançada</h1> 
-      <nav> 
-        <a href="#" class="cabecalho-link">Início</a> 
-      </nav> 
-    </header> 
- 
-    <main> 
-      <h2>Descubra a resposta interagindo com o cartão</h2> 
-      <section class="cartoes"> 
-        <article class="cartao" onclick="virarCard()">
-          <div class="cartao-interno">
-            <div class="cartao-frente">
-              <p id="pergunta">Carregando pergunta...</p>
-            </div> 
-            <div class="cartao-verso"> 
-              <p id="resposta" class="escondido">Carregando resposta...</p>
-            </div> 
-          </div> 
-        </article> 
-      </section>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Flashcards: Física Óptica</h1>
+        <a href="#" class="nav-home">Home</a>
+    </header>
 
-      <div>
-        <button onclick="proximoCard(event)">Próximo Card</button>
-      </div>
-    </main> 
- 
-    <footer> 
-      <p>Projeto feito por [davi braga]</p> 
-    </footer> 
+    <main class="content-area">
+        <h2>Clique no cartão para revelar a resposta</h2>
+        
+        <section class="card-section">
+            <div class="flip-card" onclick="virarCard()">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p id="pergunta">Carregando...</p>
+                    </div>
+                    <div class="card-back">
+                        <p id="resposta" class="hidden">Carregando...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="action-box">
+            <button class="next-btn" onclick="proximoCard(event)">Próximo Card</button>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Desenvolvido por [Maria Zanzarini]</p>
+    </footer>
 
     <script src="script.js"></script>
-  </body> 
+</body>
 </html>
