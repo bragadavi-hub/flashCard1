@@ -1,140 +1,117 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  display: flex; 
-  flex-direction: column; 
-  min-height: 100vh; 
-  background-color: #0f172a; /* Fundo azul bem escuro (Dark Mode) */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
-  color: #f8fafc;
-} 
-
-.cabecalho { 
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Gradiente azul moderno */
-  padding: 20px 30px; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-} 
-
-h1 { 
-  color: #fff; 
-  font-size: 22px; 
-  letter-spacing: 0.5px;
-} 
-
-.cabecalho-link { 
-  color: #93c5fd; 
-  text-decoration: none; 
-  font-weight: 600;
-} 
-
-.cabecalho-link:hover { 
-  color: #fff; 
 }
 
-main { 
-  flex: 1; 
+.main-header {
+  background-color: #2b6cb0;
+  color: white;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-home {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-area {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  gap: 30px; 
-} 
-
-main h2 {
-  color: #cbd5e1;
-  font-size: 18px;
-  font-weight: normal;
+  gap: 25px;
 }
 
-.cartoes { 
-  display: flex; 
+.card-section {
+  display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
 
-.cartao {
-  width: 320px;
-  height: 230px;
+.flip-card {
+  width: 310px;
+  height: 220px;
   perspective: 1000px;
   cursor: pointer;
 }
 
-.cartao-interno { 
-  position: relative; 
+.card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
-  transform-style: preserve-3d; 
-} 
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
 
-.cartao:hover .cartao-interno, 
-.cartao:focus-within .cartao-interno { 
-  transform: rotateY(180deg); 
-} 
+.flip-card:hover .card-inner,
+.flip-card:focus-within .card-inner {
+  transform: rotateY(180deg);
+}
 
-.cartao-frente, 
-.cartao-verso { 
-  position: absolute; 
+.card-front, .card-back {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 16px; /* Bordas mais arredondadas */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
-  backface-visibility: hidden; 
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
-  background-color: #1e293b; /* Cartão cinza-azulado escuro */
-  border: 1px solid #334155;
-  font-size: 17px;
-  line-height: 1.5;
-} 
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 16px;
+}
 
-.cartao-verso { 
-  transform: rotateY(180deg); 
-  background-color: #0f172a; /* Verso com tom ligeiramente diferente */
-  border: 1px solid #3b82f6; /* Borda azulada destacando o verso */
-  color: #38bdf8; /* Texto em azul claro */
-} 
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
 
-.escondido {
+.hidden {
   display: block;
 }
 
-button {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  color: #fff;
+.next-btn {
+  background-color: #2b6cb0;
+  color: white;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
+  padding: 10px 22px;
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-  transition: transform 0.2s, opacity 0.2s;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px); /* Pequeno efeito de elevação ao passar o mouse */
+.next-btn:hover {
+  background-color: #2c5282;
 }
 
-footer { 
-  background-color: #020617; 
-  padding: 15px 25px; 
-  color: #64748b; 
+.main-footer {
+  background-color: #2b6cb0;
+  color: white;
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  padding: 15px;
 }
