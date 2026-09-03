@@ -25,15 +25,15 @@ const flashcards = [
     },
     {
         pergunta: "7. Detecção de Gás e Fumaça: Como funciona o sistema automático de detecção de incêndio com Arduino Uno e MQ-2?",
-        resposta: "O MQ-2 monitora o ar em tempo real. Em condições normais, mantém o LED verde aceso. Ao detectar fumaça ou gás, o Arduino ativa o LED vermelho e o buzzer de alerta."
+        resposta: "O MQ-2 monitora a qualidade do ar em tempo real. Em condições normais mantém o LED verde aceso; ao detectar gás ou fumaça perigosa, o Arduino aciona o LED vermelho e o buzzer sonoro de alerta."
     },
     {
-        pergunta: "8. Seguidor de Luz (LDR + Servo): Qual a função do servo motor acionado por LDRs em painéis solares?",
-        resposta: "Os sensores LDR analisam a luminosidade e o Arduino aciona o servo motor para mover a estrutura até o ponto mais iluminado, otimizando o rendimento do painel solar."
+        pergunta: "8. Seguidor de Luz (LDR + Servo): Qual é o objetivo do sistema automático que combina LDRs e Servo Motor?",
+        resposta: "Os sensores LDR analisam a luminosidade ambiente e o Arduino orienta o servo motor até o ponto mais iluminado, técnica muito usada para melhorar a eficiência de painéis solares."
     },
     {
-        pergunta: "9. Experimento de Fendas: Qual a diferença entre os padrões gerados por uma e duas fendas ao passar um laser?",
-        resposta: "Com uma fenda ocorre difração (espalhamento da luz). Com duas fendas ocorre interferência, criando faixas alternadas claras e escuras (medidas via LDRs)."
+        pergunta: "9. Experimento de Fendas: O que acontece com o feixe de laser ao passar por uma fenda e por duas fendas?",
+        resposta: "Com uma fenda a luz sofre difração (espalha-se); com duas fendas ocorre interferência, gerando faixas alternadas claras e escuras (medidas automaticamente por LDRs com Arduino)."
     }
 ];
 
@@ -61,16 +61,17 @@ function proximoCard(event) {
         event.stopPropagation();
     }
     
-    // Desvira o card antes de mudar o conteúdo
     const flipCard = document.querySelector(".flip-card");
     if (flipCard) {
+        // Desvira o card antes de ir para a próxima pergunta
         flipCard.classList.remove("virado");
     }
 
+    // Pequeno atraso para trocar o conteúdo após o card desvirar
     setTimeout(() => {
         indiceAtual = (indiceAtual + 1) % flashcards.length;
         atualizarCard();
-    }, 200);
+    }, 250);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
