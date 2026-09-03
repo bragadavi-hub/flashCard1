@@ -29,7 +29,7 @@ const flashcards = [
     },
     {
         pergunta: "8. LDR + Servo",
-        resposta: "Os sensores LDR analisam a luminosidade ambiente e o Arduino orienta o servo motor até o ponto mais iluminado, técnica muito usada para melhorar a eficiência de painéis solares."
+        resposta: "Os sensores LDR analisam a luminosidade ambiente e o Arduino orienta o servo motor até o ponto mais iluminado."
     },
     {
         pergunta: "9. Experimento de Fendas",
