@@ -62,8 +62,8 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .card-inner,
-.flip-card:focus-within .card-inner {
+/* Quando adicionada a classe 'virado', o cartão gira */
+.flip-card.virado .card-inner {
   transform: rotateY(180deg);
 }
 
@@ -80,16 +80,13 @@ body {
   padding: 20px;
   background-color: #ffffff;
   font-size: 16px;
+  line-height: 1.4;
 }
 
 .card-back {
   transform: rotateY(180deg);
   background-color: #e2e8f0;
   color: #1a202c;
-}
-
-.hidden {
-  display: block;
 }
 
 .next-btn {
