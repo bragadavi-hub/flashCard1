@@ -24,15 +24,15 @@ const flashcards = [
         resposta: "O cristalino (lente natural do olho)."
     },
     {
-        pergunta: "7. Detecção de Gás e Fumaça: Como funciona o sistema automático de detecção de incêndio com Arduino Uno e MQ-2?",
+        pergunta: "7. Detecção de Gás e Fumaça",
         resposta: "O MQ-2 monitora a qualidade do ar em tempo real. Em condições normais mantém o LED verde aceso; ao detectar gás ou fumaça perigosa, o Arduino aciona o LED vermelho e o buzzer sonoro de alerta."
     },
     {
-        pergunta: "8. Seguidor de Luz (LDR + Servo): Qual é o objetivo do sistema automático que combina LDRs e Servo Motor?",
+        pergunta: "8. LDR + Servo",
         resposta: "Os sensores LDR analisam a luminosidade ambiente e o Arduino orienta o servo motor até o ponto mais iluminado, técnica muito usada para melhorar a eficiência de painéis solares."
     },
     {
-        pergunta: "9. Experimento de Fendas: O que acontece com o feixe de laser ao passar por uma fenda e por duas fendas?",
+        pergunta: "9. Experimento de Fendas",
         resposta: "Com uma fenda a luz sofre difração (espalha-se); com duas fendas ocorre interferência, gerando faixas alternadas claras e escuras (medidas automaticamente por LDRs com Arduino)."
     }
 ];
